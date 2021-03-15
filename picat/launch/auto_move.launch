@@ -1,0 +1,6 @@
+<launch>
+  <node name="serial_node" pkg="rosserial_python" type="serial_node.py" />
+  <node pkg="picat" name="motors" type="motor.py" required="true" />
+  <node pkg="picat" name="auto_move" type="auto_move.py" required="true" />
+
+</launch>

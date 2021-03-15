@@ -1,0 +1,7 @@
+<launch>
+  <arg name="port" default="/dev/ttyACM0" />
+  <node pkg="slam_mapping" name="lam" type="slam.py" required="true" />
+  <node name="lidar_node" pkg="urg_node" type="urg_node" required="true">
+    <param name="serial_port" value="$(arg port)"/>
+  </node>
+</launch>
